@@ -39,7 +39,7 @@ const seedLocations = async () => {
         { name: 'Gramercy Theatre', address: '127 E 23rd St', city: 'New York', state: 'NY', zip: '10010', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Gramercy_Theatre.jpg/320px-Gramercy_Theatre.jpg' },
         { name: 'Met Life Stadium', address: '1 MetLife Stadium Dr', city: 'East Rutherford', state: 'NJ', zip: '07073', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/MetLife_Stadium_2019.jpg/320px-MetLife_Stadium_2019.jpg' },
         { name: 'Flushing Meadows Corona Park', address: 'Flushing Meadows', city: 'Queens', state: 'NY', zip: '11368', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Queens_Museum_at_Night.jpg/320px-Queens_Museum_at_Night.jpg' },
-        { name: 'American Airlines Arena', address: '601 Biscayne Blvd', city: 'Miami', state: 'FL', zip: '33132', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Kaseya_Center_exterior.jpg/320px-Kaseya_Center_exterior.jpg' },
+        { name: 'Madison Square Garden', address: 'Madison Square Garden', city: 'New York', state: 'NY', zip: '10001', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Madison_Square_Garden_2019.jpg/320px-Madison_Square_Garden_2019.jpg' },
     ]
 
     for (const loc of locations) {
