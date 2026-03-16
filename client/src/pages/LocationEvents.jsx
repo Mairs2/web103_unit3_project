@@ -1,10 +1,28 @@
 import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 import Event from '../components/Event'
+import LocationsAPI from '../services/LocationsAPI'
+import EventsAPI from '../services/EventsAPI'
 import '../css/LocationEvents.css'
 
-const LocationEvents = ({index}) => {
-    const [location, setLocation] = useState([])
+const LocationEvents = () => {
+    const { id } = useParams()
+    const [location, setLocation] = useState({})
     const [events, setEvents] = useState([])
+
+    useEffect(() => {
+        (async () => {
+            try {
+                const locationData = await LocationsAPI.getLocationById(id)
+                setLocation(locationData)
+                const eventsData = await EventsAPI.getEventsByLocation(id)
+                setEvents(eventsData)
+            }
+            catch (error) {
+                throw error
+            }
+        }) ()
+    }, [id])
 
     return (
         <div className='location-events'>
@@ -21,7 +39,7 @@ const LocationEvents = ({index}) => {
 
             <main>
                 {
-                    events && events.length > 0 ? events.map((event, index) =>
+                    events && events.length > 0 ? events.map((event) =>
                         <Event
                             key={event.id}
                             id={event.id}

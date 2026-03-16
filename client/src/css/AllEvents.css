@@ -1,0 +1,29 @@
+.all-events {
+    width: 100%;
+    padding: 20px 30px;
+}
+
+.all-events-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.all-events-controls label {
+    font-weight: bold;
+}
+
+.all-events-controls select {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.all-events-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+}
